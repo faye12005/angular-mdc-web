@@ -170,14 +170,11 @@
     <div fxLayout="row" fxLayoutWrap>
       <button mdc-button (click)="singleline.border = !singleline.border">Border: {{singleline.border ? 'On' : 'Off'}}</button>
       <button mdc-button (click)="singleline.dense = !singleline.dense">Dense: {{singleline.dense ? 'On' : 'Off'}}</button>
-      <button mdc-button (click)="divider.inset = !divider.inset">Divider Inset: {{divider.inset ? 'On' : 'Off'}}</button>
-      <button mdc-button (click)="divider.padded = !divider.padded">Divider Padded: {{divider.padded ? 'On' : 'Off'}}</button>
       <button mdc-button (click)="singleline.interactive = !singleline.interactive">Interactive w/Ripple: {{singleline.interactive ? 'On' : 'Off'}}</button>
     </div>
     <mdc-list #singleline>
       <mdc-list-item>Single-line item</mdc-list-item>
       <mdc-list-item>Single-line item</mdc-list-item>
-      <mdc-list-divider #divider></mdc-list-divider>
       <mdc-list-item>Single-line item</mdc-list-item>
     </mdc-list>
   </div>
@@ -316,6 +313,10 @@
 
   <div class="demo-list-host">
     <h3>Group Lists</h3>
+    <div fxLayout="row" fxLayoutWrap>
+      <button mdc-button (click)="divider.inset = !divider.inset">Divider Inset: {{divider.inset ? 'On' : 'Off'}}</button>
+      <button mdc-button (click)="divider.padded = !divider.padded">Divider Padded: {{divider.padded ? 'On' : 'Off'}}</button>
+    </div>
     <mdc-list-group>
       <mdc-list-group-subheader>First Group</mdc-list-group-subheader>
       <mdc-list>
@@ -332,7 +333,7 @@
           <mdc-icon mdc-list-item-meta>info</mdc-icon>
         </a>
       </mdc-list>
-      <mdc-list-divider></mdc-list-divider>
+      <mdc-list-divider #divider></mdc-list-divider>
       <mdc-list-group-subheader>Second Group</mdc-list-group-subheader>
       <mdc-list [avatar]="true">
         <a mdc-list-item href="#/list-demo">
