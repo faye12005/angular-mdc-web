@@ -178,6 +178,7 @@
     </table>
   </div>
   <h3>Select with ngModel </h3>
+  <a mdc-button href="https://stackblitz.com/edit/angular-mdc?embed=1&file=app/select-demo.html" target="_blank" rel="noopener noreferrer">View Source</a>
   <div [mdc-theme-dark]="isDarkTheme">
     <mdc-select #select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food"
      [disabled]="isDisabled" (change)="handleChange($event)">
@@ -198,9 +199,9 @@
 Change event: index: {{eventIndex}}, value: {{eventValue}}</pre>
   <button mdc-button (click)="clearSelection()">Clear Selection</button>
   <button mdc-button (click)="setSelection()">Set Selection to Fruit</button>
-<a mdc-button href="https://stackblitz.com/edit/angular-mdc?embed=1&file=app/select-demo.html" target="_blank" rel="noopener noreferrer">View Example Code</a>
 
 <h3>Select with FormControl</h3>
+<a mdc-button href="https://stackblitz.com/edit/angular-mdc?embed=1&file=app/select-demo.html" target="_blank" rel="noopener noreferrer">View Source</a>
 <mdc-select placeholder="Favorite food" [formControl]="foodControl">
   <mdc-select-item *ngFor="let food of foods" [value]="food.value" [disabled]="food.disabled">
     {{food.description}}
@@ -212,5 +213,4 @@ Change event: index: {{eventIndex}}, value: {{eventValue}}</pre>
 <p mdc-typography-body1>Status: {{ foodControl.status }}</p>
 <button mdc-button (click)="foodControl.setValue('pizza-1')">SET VALUE (pizza)</button>
 <button mdc-button (click)="foodControl.reset()">Reset Value</button>
-<a mdc-button href="https://stackblitz.com/edit/angular-mdc?embed=1&file=app/select-demo.html" target="_blank" rel="noopener noreferrer">View Example Code</a>
 </div>
